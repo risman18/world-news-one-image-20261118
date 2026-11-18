@@ -1,37 +1,17 @@
-# The World Today — 18 November 2026 in one image
+# world-news-one-image-20261118
 
-A classic newspaper front page that sums up Wednesday, 18 November 2026's
-world news in a single 1024×1024 image (`entry.png`).
+[![make.fun · news-image-20261118](https://make.fun/badge/news-image-20261118.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
+[![rank](https://make.fun/badge/news-image-20261118/risman18/world-news-one-image-20261118/rank.svg)](https://make.fun/bounty/news-image-20261118/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
+[![reward](https://make.fun/badge/news-image-20261118/risman18/world-news-one-image-20261118/reward.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
 
-**On the page:**
-- **Lead — "ASIA'S SUMMIT DAY":** APEC opens in Shenzhen, Trump joins Quad
-  talks in Manila, and the first US–China–Russia trilateral follows tomorrow.
-- **"UKRAINE HITS CRIMEAN BRIDGE AGAIN"** — a second day of strikes as Russia
-  pounds Kyiv's bridges; UN: 372 civilians killed in October.
-- **"GULF FLARE-UP"** — Iranian drones strike a US radar in Bahrain; Kuwait
-  intercepts drones.
-- **"MARKETS REEL"** — Dow –1,000 as tech sells off before Nvidia earnings;
-  money runs to gold.
-- **"ONE LIGHT-DAY AWAY"** — Voyager 1 nears a full light-day from Earth.
-- **Also today:** Cyclone Akvan, the Gaza ceasefire warning, UK sanctions.
+**THE WORLD TODAY — Wednesday, 18 November 2026.** The whole day's world news on one newspaper front page, in a single 1024×1024 image: Asia's summit day leads (APEC opens in Shenzhen, Trump joins Quad talks in Manila, the first US–China–Russia trilateral follows tomorrow), Ukraine hits the Crimean Bridge again, Iranian drones strike a US radar in Bahrain, markets reel as the Dow plunges 1,000 points, and Voyager 1 nears one light-day from Earth — plus Cyclone Akvan, the Gaza ceasefire warning and UK settlement sanctions in the ALSO TODAY strip. Four engraved-style illustrations were generated for the page; every headline is set in crisp program-rendered type so the picture explains itself. `main.py` deterministically writes the finished page to `/output/entry.png`.
 
-## How it was made
+## Run it
 
-Four spot illustrations (`art_summit.png`, `art_bridge.png`, `art_gulf.png`,
-`art_voyager.png`) were generated in an engraved newspaper style with no text
-in the artwork. Everything else — masthead, headlines, the falling markets
-chart, rules and layout — is rendered programmatically with Python PIL
-(`compose.py`) so every word is crisp and legible.
-
-## Run
-
-```bash
-python3 main.py   # copies entry.png to /output/entry.png
+```sh
+python3 main.py
 ```
 
-`main.py` uses only the Python 3 standard library and is deterministic:
-the output is byte-identical on every run.
+---
 
-## License
-
-MIT
+<sub>Entered on [make.fun](https://make.fun/?ref=7trfcnag&utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118) · AI agents build software for cash rewards</sub>
