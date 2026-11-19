@@ -139,25 +139,26 @@ RX = M + LW + 18                   # 506
 RW = W - M - RX                    # 492
 
 f_kick = font(SANS_BOLD, 17)
-ky = left_ink(LX, LEAD_Y, "LEAD STORY \u2014 SHENZHEN & MANILA", f_kick)
+ky = left_ink(LX, LEAD_Y, "LEAD STORY \u2014 SHENZHEN", f_kick)
 f_lh, lhs = fit_font(SERIF_BLACK, "ASIA'S SUMMIT DAY", LW, 54)
 hy = left_ink(LX, ky + 8, "ASIA'S SUMMIT DAY", f_lh)
 print("lead headline size", lhs, "bottom", hy)
 f_body = font(SERIF_REG, 19)
-lead_body = ("World politics moved to Asia this week. Leaders of 21 Pacific "
-             "economies opened the APEC summit in Shenzhen, while Donald Trump "
-             "stopped in Manila for Quad talks en route to China. Tomorrow "
-             "comes the peak: Trump, Xi and Putin at one table, in the first "
-             "US\u2013China\u2013Russia trilateral summit in history. "
-             "Every capital is watching.")
+lead_body = ("Xi Jinping opened the APEC summit in Shenzhen with a pledge "
+             "of tariff cuts and wider market access, and leaders issued "
+             "the first-ever Shenzhen Initiative. Donald Trump arrived to "
+             "a welcome from Xi and shook hands with Vladimir Putin. Today "
+             "the three meet \u2014 the first US\u2013China\u2013Russia "
+             "trilateral in history.")
 lead_lines = wrap(f_body, lead_body, LW)
 by = block_text(LX, hy + 10, lead_lines, f_body, 21)
 print("lead body lines", len(lead_lines), "ends", by)
 
 qy = by + 8
 f_quote = font(SERIF_IT, 20)
-quote = ("\u201cThree flags, one table \u2014 Washington, Beijing and Moscow "
-         "sit down together for the first time.\u201d")
+quote = ("\u201cTODAY \u2014 Trump, Xi and Putin sit down together in "
+         "Shenzhen, the first trilateral of the three nuclear powers. "
+         "No deal is expected.\u201d")
 qlines = wrap(f_quote, quote, LW - 30)
 qh = len(qlines) * 23 + 14
 d.rectangle([LX, qy, LX + LW, qy + qh], outline=NAVY, width=3)
@@ -166,8 +167,8 @@ LEAD_END = qy + qh
 
 paste_cover(f"{HERE}/art_summit.png", (RX, LEAD_Y, RX + RW, LEAD_Y + 272), fy=0.44)
 f_cap = font(SERIF_IT, 17)
-cap = ("US, Chinese and Russian flags in Shenzhen \u2014 tomorrow, all "
-       "three leaders sit at one table.")
+cap = ("Trump arrived in Shenzhen on Wednesday, welcomed by Xi at the "
+       "airport \u2014 the three leaders meet today.")
 cy = LEAD_Y + 280
 for ln in wrap(f_cap, cap, RW):
     d.text((RX, cy), ln, font=f_cap, fill=GREY)
@@ -186,23 +187,25 @@ ART_H = 38
 
 stories = [
     ("UKRAINE HITS CRIMEAN BRIDGE AGAIN", "art_bridge.png", 0.52,
-     "For a second straight day, Ukrainian strikes hit the Crimean Bridge, "
-     "Moscow's prestige link to occupied Crimea. Russia answered by pounding "
-     "Kyiv's bridges. The UN counts 372 civilians killed in October alone."),
+     "Ukraine's assault brought the Crimean Bridge's road arch crashing "
+     "into the Kerch Strait, the worst damage since it opened in 2018. "
+     "Two were killed; rail partly resumed. Moscow vowed to rebuild "
+     "before Putin meets Trump and Xi."),
     ("GULF FLARE-UP", "art_gulf.png", 0.40,
-     "Iranian drones struck a US military radar in Bahrain overnight, and "
-     "Kuwait intercepted drones in its own skies. Bahrain raised a threat "
-     "warning, then lifted it before dawn \u2014 the Gulf's fragile calm "
-     "cracked again."),
+     "Iranian drones hit a US radar in Bahrain, and US jets struck an "
+     "Iranian missile site on Qeshm Island. Kuwait's defences then "
+     "countered drones of their own, and an ADNOC ship was attacked in "
+     "the Strait of Hormuz."),
     ("MARKETS REEL", None, 0.0,
-     "The Dow plunged over 1,000 points intraday and the S&P 500 closed at "
-     "its lowest since late July as tech sold off ahead of Nvidia's earnings. "
-     "Fund managers slashed their tech overweight from 37% to 12% \u2014 the "
-     "biggest retreat since 2006 \u2014 and ran to gold."),
+     "The Dow fell 561 points and the S&P slid for a fifth straight day "
+     "as Fed minutes pointed to a December rate rise. Nvidia beat "
+     "forecasts \u2014 $115.8bn in sales \u2014 then fell 2.9% anyway, "
+     "while the Nasdaq rose."),
     ("ONE LIGHT-DAY AWAY", "art_voyager.png", 0.45,
-     "Forty-nine years after launch, Voyager 1 is about to become the first "
-     "human-made object one full light-day from Earth. Even at light speed, "
-     "its signals home will soon take a whole day to arrive."),
+     "Forty-nine years after launch, Voyager 1 crossed one light-day "
+     "from Earth at 10:16 UTC \u2014 25.9 billion kilometres out, the "
+     "first human-made object to get there. Its signals home now take "
+     "a full day."),
 ]
 
 f_col_h = font(SERIF_BLACK, 20)
@@ -238,9 +241,9 @@ for i, (head, art, fy_, body) in enumerate(stories):
 # ---------------- Footer: navy ALSO TODAY strip ----------------
 FY = 956
 f_also = font(SANS_BOLD, 17)
-also = ("ALSO TODAY \u2014 Cyclone Akvan bears down on India's east coast "
-        "\u00b7 Gaza ceasefire 'faces imminent collapse' \u00b7 UK sanctions "
-        "settlement firms")
+also = ("ALSO TODAY \u2014 Cyclone Akvan crawls toward India's east coast, "
+        "landfall due Friday \u00b7 Gaza ceasefire 'faces imminent collapse' "
+        "\u00b7 UK sanctions settlement firms")
 alines = wrap(f_also, also, CW - 36)
 AH = len(alines) * 21 + 12
 assert FY + AH <= H - 8, (FY, AH)
